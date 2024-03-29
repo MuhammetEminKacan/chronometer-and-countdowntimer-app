@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ZamanlayiciFragment">
+
+    <TextView
+        android:id="@+id/txtSure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSaat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="saat"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSure" />
+
+    <EditText
+        android:id="@+id/editTextDakika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="dakika"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSaat" />
+
+    <EditText
+        android:id="@+id/editTextSaniye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="saniye"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDakika" />
+
+    <ImageView
+        android:id="@+id/ivBaslat"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/play"
+        app:layout_constraintEnd_toStartOf="@+id/ivDuraklat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivSonlandir"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSaniye" />
+
+    <ImageView
+        android:id="@+id/ivDuraklat"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/pause"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivBaslat"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSaniye" />
+
+    <ImageView
+        android:id="@+id/ivSonlandir"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/cancel"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/ivBaslat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSaniye" />
+
+    <ImageView
+        android:id="@+id/ivDevamEttir"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:src="@drawable/play"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDuraklat"
+        app:layout_constraintEnd_toEndOf="@+id/ivDuraklat"
+        app:layout_constraintStart_toStartOf="@+id/ivDuraklat"
+        app:layout_constraintTop_toTopOf="@+id/ivDuraklat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

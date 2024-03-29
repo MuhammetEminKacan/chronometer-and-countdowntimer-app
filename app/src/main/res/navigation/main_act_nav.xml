@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_act_nav"
+    app:startDestination="@id/kronometreFragment">
+
+    <fragment
+        android:id="@+id/kronometreFragment"
+        android:name="com.emin.kacan.kronometre.fragments.KronometreFragment"
+        android:label="fragment_kronometre"
+        tools:layout="@layout/fragment_kronometre" />
+    <fragment
+        android:id="@+id/zamanlayiciFragment"
+        android:name="com.emin.kacan.kronometre.fragments.ZamanlayiciFragment"
+        android:label="fragment_zamanlayici"
+        tools:layout="@layout/fragment_zamanlayici" />
+</navigation>

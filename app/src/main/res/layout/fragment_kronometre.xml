@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.KronometreFragment">
+
+    <Chronometer
+        android:id="@+id/kronometre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="139dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBaslatma"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/play"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/ivDevam"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivBitir"
+        app:layout_constraintTop_toBottomOf="@+id/kronometre" />
+
+    <ImageView
+        android:id="@+id/ivDurdur"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:src="@drawable/pause"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBaslatma"
+        app:layout_constraintEnd_toEndOf="@+id/ivBaslatma"
+        app:layout_constraintStart_toStartOf="@+id/ivBaslatma"
+        app:layout_constraintTop_toTopOf="@+id/ivBaslatma" />
+
+    <ImageView
+        android:id="@+id/ivDevam"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/play"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivBaslatma"
+        app:layout_constraintTop_toBottomOf="@+id/kronometre" />
+
+    <ImageView
+        android:id="@+id/ivBitir"
+        android:layout_width="87dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/cancel"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/ivBaslatma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kronometre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
